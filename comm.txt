@@ -1,0 +1,10 @@
+git config --global user.name ""
+git config --global user.email ""
+cd -> adresa www din wamp
+git clone https://github.com/carabationut/laravel01.git
+cd -> folderul in care lucram
+git add .(. inseamna all)
+git commit -m "Mesajul dorit"
+git push (pentru a urca datele)
+
+git pull origin master (pentru a updata folderul local conform git-ului)
