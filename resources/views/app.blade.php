@@ -7,6 +7,7 @@
 	<!--Css files -->
 	<link rel="stylesheet" href="http://laravel.lc/css/style.css" />
 	<link rel="stylesheet" href="http://laravel.lc/css/bootstrap.css" />
+	<link rel="stylesheet" href="{{ elixir('css/all.css') }}" />
 
 	<!--Js files-->
 	<script src="http://laravel.lc/js/jquery-1.11.3.min.js"></script>
