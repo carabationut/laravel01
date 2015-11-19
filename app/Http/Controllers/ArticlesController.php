@@ -9,7 +9,8 @@ use App\Http\Requests\ArticleRequest;
 use App\Http\Controllers\Controller;
 use App\Article;
 use Carbon\Carbon;
-
+use Session;
+use Flash;
 
 class ArticlesController extends Controller
 {
@@ -43,14 +44,18 @@ class ArticlesController extends Controller
     	return view('articles.create');
     }
 
-    public function store(Request  $request) 
+    public function store(ArticleRequest  $request) 
     {
-        $article = new Article($request->all());
+        //$article = new Article($request->all());
 
-        \Auth::user()->articles()->save($article);
+        \Auth::user()->articles()->create($request->all());
 
+        //session()->flash('flash_message', 'Your article has been created!');
+        //session()->flash('flash_message_imporatant', true);
 
-    	return redirect('articles');
+    	flash('Some message');
+
+        return redirect('articles');
     }
 
     public function edit(Article $article) 

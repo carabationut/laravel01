@@ -17,10 +17,16 @@
 <body>
 
 	<div class="container">
+		
+			@include('flash::message')
+
 			@yield('content')
 	</div>
 
-
+	 <!-- This is only necessary if you do Flash::overlay('...') -->
+<script>
+    $('#flash-overlay-modal').modal();
+</script>
 	@yield('footer')
 </body>
 </html>
